@@ -1,2 +1,2 @@
 # NPC Chat
-Receive life advice from your favorite characters and NPCs. Be warned, some of these individuals have not made good life choices.
+Receive advice from your favorite fictional characters and NPCs. Be warned, these individuals have not made good life choices.
