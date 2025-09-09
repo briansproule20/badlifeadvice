@@ -128,8 +128,8 @@ export default function Home() {
                                     className="bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow cursor-pointer p-6"
                                 >
                                     <div className="text-center">
-                                        <div className="w-16 h-16 mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center">
-                                            <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+                                        <div className="w-16 h-16 mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
+                                            <img src={character.avatar} alt={character.name} className="w-full h-full object-cover rounded-full" />
                                         </div>
                                         <h3 className="text-lg font-semibold text-gray-900 mb-2">
                                             {character.name}

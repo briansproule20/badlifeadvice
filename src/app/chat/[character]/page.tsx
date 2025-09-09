@@ -83,8 +83,8 @@ export default function CharacterChat() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col items-center">
           <div className="text-center mb-8">
-            <div className="w-24 h-24 mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center">
-              <div className="w-20 h-20 bg-gray-300 rounded-full"></div>
+            <div className="w-24 h-24 mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
+              <img src={character.avatar} alt={character.name} className="w-full h-full object-cover rounded-full" />
             </div>
             <h1 className="text-3xl font-bold text-gray-900 mb-2">
               Chat with {character.name}
