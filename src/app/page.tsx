@@ -34,11 +34,25 @@ const characters = [
     category: "Helldivers • Patriotic • Militant"
   },
   {
+    id: "dwight-schrute",
+    name: "Dwight Schrute",
+    avatar: "/avatars/dwight-schrute.png",
+    description: "Assistant Regional Manager. Beet farmer, survivalist, and aspiring dictator.",
+    category: "The Office • Intense • Ambitious"
+  },
+  {
     id: "madara",
     name: "Madara Uchiha",
     avatar: "/avatars/madara.png",
     description: "Legendary ninja with grand visions. Philosophical advice about power and reality.",
     category: "Naruto • Powerful • Philosophical"
+  },
+  {
+    id: "michael-scott",
+    name: "Michael Scott",
+    avatar: "/avatars/michael-scott.png",
+    description: "World's best boss! Regional manager with questionable management skills and endless enthusiasm.",
+    category: "The Office • Enthusiastic • Clueless"
   },
   {
     id: "minecraft-villager",
@@ -53,6 +67,13 @@ const characters = [
     avatar: "/avatars/nazeem.png",
     description: "Do you get to the Cloud District very often?",
     category: "Skyrim • Arrogant • Condescending"
+  },
+  {
+    id: "ron-swanson",
+    name: "Ron Swanson",
+    avatar: "/avatars/ron-swanson.png",
+    description: "Director of Parks and Recreation. Libertarian with strong opinions about government and meat.",
+    category: "Parks & Rec • Libertarian • Stoic"
   },
   {
     id: "tommy-shelby",

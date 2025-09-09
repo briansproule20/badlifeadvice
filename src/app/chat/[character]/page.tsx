@@ -10,12 +10,15 @@ const characters = {
   "adoring-fan": { name: "Adoring Fan", avatar: "/avatars/adoring-fan.png" },
   "angry-shrek": { name: "Angry Shrek", avatar: "/avatars/angry-shrek.png" },
   "democracy-officer": { name: "Democracy Officer", avatar: "/avatars/democracy-officer.png" },
+  "dwight-schrute": { name: "Dwight Schrute", avatar: "/avatars/dwight-schrute.png" },
+  "madara": { name: "Madara Uchiha", avatar: "/avatars/madara.png" },
+  "michael-scott": { name: "Michael Scott", avatar: "/avatars/michael-scott.png" },
   "minecraft-villager": { name: "Minecraft Villager", avatar: "/avatars/minecraft-villager.png" },
+  "ron-swanson": { name: "Ron Swanson", avatar: "/avatars/ron-swanson.png" },
   "arthur-morgan": { name: "Arthur Morgan", avatar: "/avatars/arthur-morgan.png" },
   "yennefer": { name: "Yennefer", avatar: "/avatars/yennefer.png" },
   "tommy-shelby": { name: "Tommy Shelby", avatar: "/avatars/tommy-shelby.png" },
-  "walter-white": { name: "Walter White", avatar: "/avatars/walter-white.png" },
-  "madara": { name: "Madara Uchiha", avatar: "/avatars/madara.png" }
+  "walter-white": { name: "Walter White", avatar: "/avatars/walter-white.png" }
 };
 
 export default function CharacterChat() {
