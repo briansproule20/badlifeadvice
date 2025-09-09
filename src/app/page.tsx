@@ -44,7 +44,7 @@ const characters = [
     id: "minecraft-villager",
     name: "Minecraft Villager",
     avatar: "/avatars/minecraft-villager.png",
-    description: "Hrmm. Practical trading advice and village wisdom. Emeralds not included.",
+    description: "Hrmmmm. Practical trading advice and village wisdom. Emeralds not included.",
     category: "Minecraft • Simple • Wise"
   },
   {
@@ -58,7 +58,7 @@ const characters = [
     id: "tommy-shelby",
     name: "Tommy Shelby",
     avatar: "/avatars/tommy-shelby.png",
-    description: "Birmingham gang leader.. Business advice by order of the Peaky Blinders.",
+    description: "Birmingham gang leader. Business advice by order of the Peaky Blinders.",
     category: "Peaky Blinders • Calculated • Ambitious"
   },
   {
