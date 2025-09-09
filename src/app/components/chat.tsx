@@ -160,10 +160,10 @@ export default function Chat({ characterId }: ChatProps = {}) {
                           em: ({ children }) => <em className="italic">{children}</em>,
                         }}
                       >
-                        {message.parts?.[0]?.text || message.content}
+                        {message.content}
                       </ReactMarkdown>
                     ) : (
-                      message.parts?.[0]?.text || message.content
+                      message.content
                     )}
                   </div>
                 </div>
