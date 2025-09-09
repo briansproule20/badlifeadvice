@@ -11,7 +11,10 @@ const characters = {
   "democracy-officer": { name: "Democracy Officer", avatar: "/avatars/democracy-officer.png" },
   "minecraft-villager": { name: "Minecraft Villager", avatar: "/avatars/minecraft-villager.png" },
   "arthur-morgan": { name: "Arthur Morgan", avatar: "/avatars/arthur-morgan.png" },
-  "yennefer": { name: "Yennefer", avatar: "/avatars/yennefer.png" }
+  "yennefer": { name: "Yennefer", avatar: "/avatars/yennefer.png" },
+  "tommy-shelby": { name: "Tommy Shelby", avatar: "/avatars/tommy-shelby.png" },
+  "walter-white": { name: "Walter White", avatar: "/avatars/walter-white.png" },
+  "madara": { name: "Madara Uchiha", avatar: "/avatars/madara.png" }
 };
 
 export default function CharacterChat() {

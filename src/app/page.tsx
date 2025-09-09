@@ -46,6 +46,27 @@ const characters = [
     avatar: "/avatars/yennefer.png",
     description: "Powerful sorceress with sharp wit. Magical solutions to life's problems.",
     category: "The Witcher • Sarcastic • Powerful"
+  },
+  {
+    id: "tommy-shelby",
+    name: "Tommy Shelby",
+    avatar: "/avatars/tommy-shelby.png",
+    description: "Birmingham gang leader with razor-sharp intelligence. Business advice by order of the Peaky Blinders.",
+    category: "Peaky Blinders • Calculated • Ambitious"
+  },
+  {
+    id: "walter-white",
+    name: "Walter White",
+    avatar: "/avatars/walter-white.png",
+    description: "High school chemistry teacher turned strategic mastermind. Methodical problem-solving advice.",
+    category: "Breaking Bad • Scientific • Ruthless"
+  },
+  {
+    id: "madara",
+    name: "Madara Uchiha",
+    avatar: "/avatars/madara.png",
+    description: "Legendary ninja with grand visions. Philosophical advice about power and reality.",
+    category: "Naruto • Powerful • Philosophical"
   }
 ];
 
