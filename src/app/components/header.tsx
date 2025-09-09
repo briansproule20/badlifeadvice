@@ -4,19 +4,23 @@ import { useState, useEffect } from "react";
 
 export default function Header({ isSignedIn }: { isSignedIn: boolean }) {
   const [user, setUser] = useState<any>(null);
+  const [balance, setBalance] = useState<number | null>(null);
   const echoClient = useEcho();
 
   useEffect(() => {
     if (isSignedIn) {
-      const fetchUser = async () => {
+      const fetchUserAndBalance = async () => {
         try {
           const userInfo = await echoClient.users.getUserInfo();
           setUser(userInfo);
+          
+          const balanceInfo = await echoClient.balance.getBalance();
+          setBalance(balanceInfo.balance);
         } catch (error) {
-          console.log('Failed to fetch user info:', error);
+          console.log('Failed to fetch user info or balance:', error);
         }
       };
-      fetchUser();
+      fetchUserAndBalance();
     }
   }, [isSignedIn, echoClient]);
 
@@ -42,6 +46,9 @@ export default function Header({ isSignedIn }: { isSignedIn: boolean }) {
               <div className="flex items-center space-x-3">
                 <div className="hidden sm:block text-sm text-gray-600">
                   Welcome, {user.name || user.email}
+                </div>
+                <div className="text-sm text-gray-500 px-3 py-1 rounded-md border border-gray-300 bg-gray-50">
+                  {balance !== null ? `$${balance.toFixed(2)}` : 'Loading...'}
                 </div>
                 <button
                   onClick={() => signOut()}
