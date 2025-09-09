@@ -10,42 +10,42 @@ const characters = [
     name: "Nazeem",
     avatar: "/avatars/nazeem.png",
     description: "Condescending Whiterun citizen. Do you get to the Cloud District very often?",
-    category: "Gaming"
+    category: "Skyrim • Arrogant • Condescending"
   },
   {
     id: "adoring-fan",
     name: "The Adoring Fan",
     avatar: "/avatars/adoring-fan.png",
     description: "Your biggest supporter! By Azura, by Azura, by Azura! Always enthusiastic advice.",
-    category: "Gaming"
+    category: "Oblivion • Enthusiastic • Supportive"
   },
   {
     id: "democracy-officer",
     name: "Democracy Officer",
     avatar: "/avatars/democracy-officer.png",
     description: "Spreading managed democracy across the galaxy. For Super Earth!",
-    category: "Gaming"
+    category: "Helldivers • Patriotic • Militant"
   },
   {
     id: "minecraft-villager",
     name: "Minecraft Villager",
     avatar: "/avatars/minecraft-villager.png",
     description: "Hrmm. Practical trading advice and village wisdom. Emeralds not included.",
-    category: "Gaming"
+    category: "Minecraft • Simple • Wise"
   },
   {
     id: "arthur-morgan",
     name: "Arthur Morgan",
     avatar: "/avatars/arthur-morgan.png",
     description: "Outlaw with a heart of gold. Life advice from the old west with honor.",
-    category: "Gaming"
+    category: "Red Dead • Honorable • Loyal"
   },
   {
     id: "yennefer",
     name: "Yennefer",
     avatar: "/avatars/yennefer.png",
     description: "Powerful sorceress with sharp wit. Magical solutions to life's problems.",
-    category: "Gaming"
+    category: "The Witcher • Sarcastic • Powerful"
   }
 ];
 
