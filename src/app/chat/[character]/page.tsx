@@ -93,7 +93,7 @@ export default function CharacterChat() {
               Get advice and wisdom from {character.name}
             </p>
           </div>
-          <Chat characterId={characterId} />
+          <Chat characterId={characterId} characterName={character.name} />
         </div>
       </main>
     </div>

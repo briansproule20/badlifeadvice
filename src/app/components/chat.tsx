@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 
 interface ChatProps {
   characterId?: string;
+  characterName?: string;
 }
 
 interface Message {
@@ -13,7 +14,7 @@ interface Message {
   id: string;
 }
 
-export default function Chat({ characterId }: ChatProps = {}) {
+export default function Chat({ characterId, characterName }: ChatProps = {}) {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -38,7 +39,7 @@ export default function Chat({ characterId }: ChatProps = {}) {
             <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
             <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
           </div>
-          <span className="text-sm text-gray-500 ml-2">AI is thinking...</span>
+          <span className="text-sm text-gray-500 ml-2">{characterName || 'AI'} is thinking...</span>
         </div>
       </div>
     </div>
