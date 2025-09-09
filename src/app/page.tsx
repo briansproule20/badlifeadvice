@@ -24,7 +24,7 @@ const characters = [
     name: "Arthur Morgan",
     avatar: "/avatars/arthur-morgan.png",
     description: "Outlaw. Life advice from the old west.",
-    category: "Red Dead • Honorable • Loyal"
+    category: "Red Dead II • Honorable • Loyal"
   },
   {
     id: "democracy-officer",
@@ -37,28 +37,28 @@ const characters = [
     id: "gandalf",
     name: "Gandalf",
     avatar: "/avatars/gandalf.png",
-    description: "Wise wizard with ancient knowledge. You shall not pass without good advice!",
+    description: "Istari endowed with ancient knowledge from the Valar.",
     category: "Lord of the Rings • Wise • Mystical"
   },
   {
     id: "dwight-schrute",
     name: "Dwight Schrute",
     avatar: "/avatars/dwight-schrute.png",
-    description: "Assistant Regional Manager. Beet farmer, survivalist, and aspiring dictator.",
+    description: "Assistant Regional Manager. Beet farmer, survivalist, aspiring dictator.",
     category: "The Office • Intense • Ambitious"
   },
   {
     id: "madara",
     name: "Madara Uchiha",
     avatar: "/avatars/madara.png",
-    description: "Legendary ninja with grand visions. Philosophical advice about power and reality.",
+    description: "Legendary ninja. Philosophical advice about power and reality.",
     category: "Naruto • Powerful • Philosophical"
   },
   {
     id: "michael-scott",
     name: "Michael Scott",
     avatar: "/avatars/michael-scott.png",
-    description: "World's best boss! Regional manager with questionable management skills and endless enthusiasm.",
+    description: "World's best boss! That's what she said!",
     category: "The Office • Enthusiastic • Clueless"
   },
   {
