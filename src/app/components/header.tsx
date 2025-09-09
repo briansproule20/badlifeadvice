@@ -31,7 +31,7 @@ export default function Header({ isSignedIn }: { isSignedIn: boolean }) {
           {/* Logo/Brand */}
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2 cursor-pointer" onClick={() => window.location.href = '/'}>
-              <img src="/favicon.png" alt="NPC Chat" className="w-8 h-8" />
+              <img src="/npc-chat favicon.png" alt="NPC Chat" className="w-8 h-8" />
               <div className="text-xl font-semibold text-black">
                 NPC Chat
               </div>

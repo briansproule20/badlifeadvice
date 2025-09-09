@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: 'NPC Chat - AI Character Advice',
   description: 'Get life advice from your favorite characters and NPCs. Be warned, some of these individuals have not made good life choices.',
   icons: {
-    icon: '/favicon.png',
+    icon: '/npc-chat favicon.png',
   },
   openGraph: {
     title: 'NPC Chat - AI Character Advice',
     description: 'Get life advice from your favorite characters and NPCs. Be warned, some of these individuals have not made good life choices.',
-    images: ['/favicon.png'],
+    images: ['/npc-chat favicon.png'],
   },
 }
 
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="icon" href="/npc-chat favicon.png" type="image/png" />
       </head>
       <body className="antialiased font-inter">
         {children}
