@@ -4,6 +4,72 @@ import Header from "./components/header";
 import { signIn, useEcho } from "@merit-systems/echo-next-sdk/client";
 import { useState, useEffect } from "react";
 
+const characters = [
+  {
+    id: "gandalf",
+    name: "Gandalf",
+    emoji: "🧙‍♂️",
+    description: "Wise wizard offering guidance through your darkest hours and greatest challenges.",
+    category: "Fantasy"
+  },
+  {
+    id: "tony-soprano",
+    name: "Tony Soprano", 
+    emoji: "🤵",
+    description: "Family man with questionable business practices. Take his advice at your own risk.",
+    category: "TV Drama"
+  },
+  {
+    id: "yoda",
+    name: "Master Yoda",
+    emoji: "👽",
+    description: "Ancient Jedi Master. Patience and wisdom, he offers. Good advice, you will receive.",
+    category: "Sci-Fi"
+  },
+  {
+    id: "tyrion",
+    name: "Tyrion Lannister",
+    emoji: "🍷", 
+    description: "Sharp wit and political cunning. He drinks and he knows things.",
+    category: "Fantasy"
+  },
+  {
+    id: "rick-sanchez",
+    name: "Rick Sanchez",
+    emoji: "🔬",
+    description: "Genius scientist with questionable morals. His advice might break reality.",
+    category: "Animation"
+  },
+  {
+    id: "gordon-ramsay",
+    name: "Gordon Ramsay",
+    emoji: "👨‍🍳",
+    description: "Passionate chef who will tell you exactly what he thinks. No sugar-coating.",
+    category: "Celebrity"
+  },
+  {
+    id: "sherlock",
+    name: "Sherlock Holmes",
+    emoji: "🔍",
+    description: "Master detective with keen observation skills. Elementary problem-solving.",
+    category: "Literature"
+  },
+  {
+    id: "deadpool",
+    name: "Deadpool",
+    emoji: "🦸‍♂️",
+    description: "Merc with a mouth. His advice comes with maximum effort and maximum sarcasm.",
+    category: "Comics"
+  },
+  {
+    id: "obi-wan",
+    name: "Obi-Wan Kenobi",
+    emoji: "⚔️",
+    description: "Jedi Knight with infinite patience. From a certain point of view, great advice.",
+    category: "Sci-Fi"
+  }
+];
+
 export default function Home() {
     const [isSignedIn, setIsSignedIn] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
@@ -65,8 +131,38 @@ export default function Home() {
                         </div>
                     </div>
                 ) : (
-                    <div className="flex flex-col items-center">
-                        <Chat />
+                    <div className="max-w-6xl mx-auto">
+                        <div className="text-center mb-12">
+                            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+                                Choose Your Character
+                            </h1>
+                            <p className="text-xl text-gray-600">
+                                Select a character to get personalized advice and chat
+                            </p>
+                        </div>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {characters.map((character) => (
+                                <div
+                                    key={character.id}
+                                    onClick={() => window.location.href = `/chat/${character.id}`}
+                                    className="bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow cursor-pointer p-6"
+                                >
+                                    <div className="text-center">
+                                        <div className="text-4xl mb-4">{character.emoji}</div>
+                                        <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                                            {character.name}
+                                        </h3>
+                                        <p className="text-sm text-gray-600 mb-4">
+                                            {character.description}
+                                        </p>
+                                        <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                                            {character.category}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 )}
             </main>

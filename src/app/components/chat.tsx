@@ -3,10 +3,15 @@
 import { useChat } from "@ai-sdk/react";
 import { useState } from "react";
 
-export default function Chat() {
+interface ChatProps {
+  characterId?: string;
+}
+
+export default function Chat({ characterId }: ChatProps = {}) {
   const [input, setInput] = useState("");
   const { messages, sendMessage } = useChat({
-    api: '/api/chat'
+    api: '/api/chat',
+    body: characterId ? { characterId } : undefined
   });
 
   const handleSubmit = (e: React.FormEvent) => {
