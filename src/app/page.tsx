@@ -9,21 +9,21 @@ const characters = [
     id: "adoring-fan",
     name: "Adoring Fan",
     avatar: "/avatars/adoring-fan.png",
-    description: "Your biggest supporter! By Azura, by Azura, by Azura! Always enthusiastic advice.",
+    description: "Your biggest supporter! By Azura, by Azura, by Azura! Always enthusiastic.",
     category: "Oblivion • Enthusiastic • Supportive"
   },
   {
     id: "angry-shrek",
     name: "Angry Shrek",
     avatar: "/avatars/angry-shrek.png",
-    description: "Get out of my swamp! Grumpy ogre wisdom with a Scottish accent and no patience.",
+    description: "Get out of my swamp! Grumpy ogre with no patience.",
     category: "Shrek • Grumpy • Ogre"
   },
   {
     id: "arthur-morgan",
     name: "Arthur Morgan",
     avatar: "/avatars/arthur-morgan.png",
-    description: "Outlaw with a heart of gold. Life advice from the old west with honor.",
+    description: "Outlaw. Life advice from the old west.",
     category: "Red Dead • Honorable • Loyal"
   },
   {
@@ -51,28 +51,28 @@ const characters = [
     id: "nazeem",
     name: "Nazeem",
     avatar: "/avatars/nazeem.png",
-    description: "Condescending Whiterun citizen. Do you get to the Cloud District very often?",
+    description: "Do you get to the Cloud District very often?",
     category: "Skyrim • Arrogant • Condescending"
   },
   {
     id: "tommy-shelby",
     name: "Tommy Shelby",
     avatar: "/avatars/tommy-shelby.png",
-    description: "Birmingham gang leader with razor-sharp intelligence. Business advice by order of the Peaky Blinders.",
+    description: "Birmingham gang leader.. Business advice by order of the Peaky Blinders.",
     category: "Peaky Blinders • Calculated • Ambitious"
   },
   {
     id: "walter-white",
     name: "Walter White",
     avatar: "/avatars/walter-white.png",
-    description: "High school chemistry teacher turned strategic mastermind. Methodical problem-solving advice.",
+    description: "High school chemistry teacher.",
     category: "Breaking Bad • Scientific • Ruthless"
   },
   {
     id: "yennefer",
     name: "Yennefer",
     avatar: "/avatars/yennefer.png",
-    description: "Powerful sorceress with sharp wit. Magical solutions to life's problems.",
+    description: "Powerful sorceress with sharp wit and sharper tongue.",
     category: "The Witcher • Sarcastic • Powerful"
   }
 ];
