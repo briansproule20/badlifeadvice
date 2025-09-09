@@ -66,14 +66,6 @@ export default function Home() {
                     </div>
                 ) : (
                     <div className="flex flex-col items-center">
-                        <div className="text-center mb-8">
-                            <h1 className="text-3xl font-bold text-gray-900 mb-2">
-                                Chat with AI
-                            </h1>
-                            <p className="text-gray-600">
-                                💰 Monetization Activated - Every message is tracked and monetized through Echo
-                            </p>
-                        </div>
                         <Chat />
                     </div>
                 )}
