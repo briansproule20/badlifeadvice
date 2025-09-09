@@ -30,8 +30,11 @@ export default function Header({ isSignedIn }: { isSignedIn: boolean }) {
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
           <div className="flex items-center space-x-4">
-            <div className="text-xl font-semibold text-black cursor-pointer" onClick={() => window.location.href = '/'}>
-              NPC Chat
+            <div className="flex items-center space-x-2 cursor-pointer" onClick={() => window.location.href = '/'}>
+              <img src="/favicon.png" alt="NPC Chat" className="w-8 h-8" />
+              <div className="text-xl font-semibold text-black">
+                NPC Chat
+              </div>
             </div>
             <div className="hidden sm:block">
               <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">

@@ -4,6 +4,14 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'NPC Chat - AI Character Advice',
   description: 'Get life advice from your favorite characters and NPCs. Be warned, some of these individuals have not made good life choices.',
+  icons: {
+    icon: '/favicon.png',
+  },
+  openGraph: {
+    title: 'NPC Chat - AI Character Advice',
+    description: 'Get life advice from your favorite characters and NPCs. Be warned, some of these individuals have not made good life choices.',
+    images: ['/favicon.png'],
+  },
 }
 
 export default function RootLayout({
@@ -13,6 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+      </head>
       <body className="antialiased font-inter">
         {children}
       </body>
