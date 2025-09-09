@@ -11,9 +11,11 @@ export default function Home() {
     useEffect(() => {
         const checkAuth = async () => {
             try {
-                const signedIn = await echoClient.isSignedIn();
-                setIsSignedIn(signedIn);
+                // Try to get user info - if it succeeds, we're signed in
+                const userInfo = await echoClient.users.getUserInfo();
+                setIsSignedIn(!!userInfo);
             } catch (error) {
+                console.log('Auth check failed:', error);
                 setIsSignedIn(false);
             }
             setIsLoading(false);
@@ -25,9 +27,16 @@ export default function Home() {
         return <div>Loading...</div>;
     }
 
-    if (!isSignedIn) {
-        return <button onClick={() => signIn()}>Sign In</button>
-    }
-    
-    return <Chat />;
+    return (
+        <div>
+            {!isSignedIn ? (
+                <button onClick={() => signIn()}>Sign In</button>
+            ) : (
+                <div>
+                    <p>Monetization Activated 📈</p>
+                    <Chat />
+                </div>
+            )}
+        </div>
+    );
 }
