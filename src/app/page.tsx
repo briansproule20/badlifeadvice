@@ -13,6 +13,13 @@ const characters = [
     category: "Oblivion • Enthusiastic • Supportive"
   },
   {
+    id: "angry-shrek",
+    name: "Angry Shrek",
+    avatar: "/avatars/angry-shrek.png",
+    description: "Get out of my swamp! Grumpy ogre wisdom with a Scottish accent and no patience.",
+    category: "Shrek • Grumpy • Ogre"
+  },
+  {
     id: "arthur-morgan",
     name: "Arthur Morgan",
     avatar: "/avatars/arthur-morgan.png",

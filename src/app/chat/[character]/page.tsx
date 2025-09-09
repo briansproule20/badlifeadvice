@@ -8,6 +8,7 @@ import Chat from "../../components/chat";
 const characters = {
   "nazeem": { name: "Nazeem", avatar: "/avatars/nazeem.png" },
   "adoring-fan": { name: "Adoring Fan", avatar: "/avatars/adoring-fan.png" },
+  "angry-shrek": { name: "Angry Shrek", avatar: "/avatars/angry-shrek.png" },
   "democracy-officer": { name: "Democracy Officer", avatar: "/avatars/democracy-officer.png" },
   "minecraft-villager": { name: "Minecraft Villager", avatar: "/avatars/minecraft-villager.png" },
   "arthur-morgan": { name: "Arthur Morgan", avatar: "/avatars/arthur-morgan.png" },
