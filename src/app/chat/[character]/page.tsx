@@ -6,15 +6,12 @@ import Header from "../../components/header";
 import Chat from "../../components/chat";
 
 const characters = {
-  "gandalf": { name: "Gandalf", emoji: "🧙‍♂️" },
-  "tony-soprano": { name: "Tony Soprano", emoji: "🤵" },
-  "yoda": { name: "Master Yoda", emoji: "👽" },
-  "tyrion": { name: "Tyrion Lannister", emoji: "🍷" },
-  "rick-sanchez": { name: "Rick Sanchez", emoji: "🔬" },
-  "gordon-ramsay": { name: "Gordon Ramsay", emoji: "👨‍🍳" },
-  "sherlock": { name: "Sherlock Holmes", emoji: "🔍" },
-  "deadpool": { name: "Deadpool", emoji: "🦸‍♂️" },
-  "obi-wan": { name: "Obi-Wan Kenobi", emoji: "⚔️" }
+  "nazeem": { name: "Nazeem", avatar: "/avatars/nazeem.png" },
+  "adoring-fan": { name: "The Adoring Fan", avatar: "/avatars/adoring-fan.png" },
+  "democracy-officer": { name: "Democracy Officer", avatar: "/avatars/democracy-officer.png" },
+  "minecraft-villager": { name: "Minecraft Villager", avatar: "/avatars/minecraft-villager.png" },
+  "arthur-morgan": { name: "Arthur Morgan", avatar: "/avatars/arthur-morgan.png" },
+  "yennefer": { name: "Yennefer", avatar: "/avatars/yennefer.png" }
 };
 
 export default function CharacterChat() {
@@ -86,7 +83,9 @@ export default function CharacterChat() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col items-center">
           <div className="text-center mb-8">
-            <div className="text-6xl mb-4">{character.emoji}</div>
+            <div className="w-24 h-24 mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center">
+              <div className="w-20 h-20 bg-gray-300 rounded-full"></div>
+            </div>
             <h1 className="text-3xl font-bold text-gray-900 mb-2">
               Chat with {character.name}
             </h1>

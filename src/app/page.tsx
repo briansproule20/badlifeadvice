@@ -6,67 +6,46 @@ import { useState, useEffect } from "react";
 
 const characters = [
   {
-    id: "gandalf",
-    name: "Gandalf",
-    emoji: "🧙‍♂️",
-    description: "Wise wizard offering guidance through your darkest hours and greatest challenges.",
-    category: "Fantasy"
+    id: "nazeem",
+    name: "Nazeem",
+    avatar: "/avatars/nazeem.png",
+    description: "Condescending Whiterun citizen. Do you get to the Cloud District very often?",
+    category: "Gaming"
   },
   {
-    id: "tony-soprano",
-    name: "Tony Soprano", 
-    emoji: "🤵",
-    description: "Family man with questionable business practices. Take his advice at your own risk.",
-    category: "TV Drama"
+    id: "adoring-fan",
+    name: "The Adoring Fan",
+    avatar: "/avatars/adoring-fan.png",
+    description: "Your biggest supporter! By Azura, by Azura, by Azura! Always enthusiastic advice.",
+    category: "Gaming"
   },
   {
-    id: "yoda",
-    name: "Master Yoda",
-    emoji: "👽",
-    description: "Ancient Jedi Master. Patience and wisdom, he offers. Good advice, you will receive.",
-    category: "Sci-Fi"
+    id: "democracy-officer",
+    name: "Democracy Officer",
+    avatar: "/avatars/democracy-officer.png",
+    description: "Spreading managed democracy across the galaxy. For Super Earth!",
+    category: "Gaming"
   },
   {
-    id: "tyrion",
-    name: "Tyrion Lannister",
-    emoji: "🍷", 
-    description: "Sharp wit and political cunning. He drinks and he knows things.",
-    category: "Fantasy"
+    id: "minecraft-villager",
+    name: "Minecraft Villager",
+    avatar: "/avatars/minecraft-villager.png",
+    description: "Hrmm. Practical trading advice and village wisdom. Emeralds not included.",
+    category: "Gaming"
   },
   {
-    id: "rick-sanchez",
-    name: "Rick Sanchez",
-    emoji: "🔬",
-    description: "Genius scientist with questionable morals. His advice might break reality.",
-    category: "Animation"
+    id: "arthur-morgan",
+    name: "Arthur Morgan",
+    avatar: "/avatars/arthur-morgan.png",
+    description: "Outlaw with a heart of gold. Life advice from the old west with honor.",
+    category: "Gaming"
   },
   {
-    id: "gordon-ramsay",
-    name: "Gordon Ramsay",
-    emoji: "👨‍🍳",
-    description: "Passionate chef who will tell you exactly what he thinks. No sugar-coating.",
-    category: "Celebrity"
-  },
-  {
-    id: "sherlock",
-    name: "Sherlock Holmes",
-    emoji: "🔍",
-    description: "Master detective with keen observation skills. Elementary problem-solving.",
-    category: "Literature"
-  },
-  {
-    id: "deadpool",
-    name: "Deadpool",
-    emoji: "🦸‍♂️",
-    description: "Merc with a mouth. His advice comes with maximum effort and maximum sarcasm.",
-    category: "Comics"
-  },
-  {
-    id: "obi-wan",
-    name: "Obi-Wan Kenobi",
-    emoji: "⚔️",
-    description: "Jedi Knight with infinite patience. From a certain point of view, great advice.",
-    category: "Sci-Fi"
+    id: "yennefer",
+    name: "Yennefer",
+    avatar: "/avatars/yennefer.png",
+    description: "Powerful sorceress with sharp wit. Magical solutions to life's problems.",
+    category: "Gaming"
   }
 ];
 
@@ -149,7 +128,9 @@ export default function Home() {
                                     className="bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow cursor-pointer p-6"
                                 >
                                     <div className="text-center">
-                                        <div className="text-4xl mb-4">{character.emoji}</div>
+                                        <div className="w-16 h-16 mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center">
+                                            <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+                                        </div>
                                         <h3 className="text-lg font-semibold text-gray-900 mb-2">
                                             {character.name}
                                         </h3>
