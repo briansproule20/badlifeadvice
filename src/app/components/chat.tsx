@@ -1,24 +1,79 @@
 "use client";
 
-import { useChat } from "@ai-sdk/react";
 import { useState } from "react";
 
 interface ChatProps {
   characterId?: string;
 }
 
+interface Message {
+  role: 'user' | 'assistant';
+  content: string;
+  id: string;
+}
+
 export default function Chat({ characterId }: ChatProps = {}) {
   const [input, setInput] = useState("");
-  const { messages, sendMessage } = useChat({
-    api: '/api/chat',
-    body: characterId ? { characterId } : undefined
-  });
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  
+  console.log("Chat component rendered with characterId:", characterId);
+  console.log("Chat state:", { messages, isLoading, input, inputLength: input.length });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (input.trim()) {
-      sendMessage({ text: input });
-      setInput("");
+  const sendMessage = async () => {
+    if (!input.trim()) return;
+    
+    console.log("Sending message:", input);
+    const userMessage: Message = {
+      role: 'user',
+      content: input,
+      id: Date.now().toString()
+    };
+    
+    setMessages(prev => [...prev, userMessage]);
+    setIsLoading(true);
+    const currentInput = input;
+    setInput("");
+    
+    // Simple non-streaming response
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          messages: [...messages, userMessage],
+          characterId
+        })
+      });
+      
+      console.log("API Response status:", response.status);
+      console.log("API Response statusText:", response.statusText);
+      console.log("API Response ok:", response.ok);
+      
+      if (response.ok) {
+        const data = await response.text();
+        console.log("API Response data:", data);
+        setMessages(prev => [...prev, {
+          role: 'assistant',
+          content: data,
+          id: (Date.now() + 1).toString()
+        }]);
+      } else {
+        const errorText = await response.text();
+        console.error("API Error status:", response.status);
+        console.error("API Error statusText:", response.statusText);
+        console.error("API Error text:", errorText);
+        throw new Error(`API call failed: ${response.status} - ${errorText}`);
+      }
+    } catch (error) {
+      console.error('Chat error:', error);
+      setMessages(prev => [...prev, {
+        role: 'assistant',
+        content: 'Sorry, something went wrong. Please try again.',
+        id: (Date.now() + 1).toString()
+      }]);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -54,22 +109,28 @@ export default function Chat({ characterId }: ChatProps = {}) {
 
       {/* Input Form */}
       <div className="border-t border-gray-200 p-4">
-        <form onSubmit={handleSubmit} className="flex space-x-2">
+        <div className="flex space-x-2">
           <input
             type="text"
             value={input}
-            onChange={(e) => setInput(e.currentTarget.value)}
+            onChange={(e) => setInput(e.target.value)}
             placeholder="Ask me anything..."
             className="flex-1 px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                e.preventDefault();
+                sendMessage();
+              }
+            }}
           />
           <button
-            type="submit"
-            disabled={!input.trim()}
+            onClick={sendMessage}
+            disabled={!input.trim() || isLoading}
             className="px-4 py-2 bg-black text-white text-sm rounded-md hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
-            Send
+            {isLoading ? 'Sending...' : 'Send'}
           </button>
-        </form>
+        </div>
       </div>
     </div>
   );
