@@ -6,32 +6,11 @@ import { useState, useEffect } from "react";
 
 const characters = [
   {
-    id: "nazeem",
-    name: "Nazeem",
-    avatar: "/avatars/nazeem.png",
-    description: "Condescending Whiterun citizen. Do you get to the Cloud District very often?",
-    category: "Skyrim • Arrogant • Condescending"
-  },
-  {
     id: "adoring-fan",
-    name: "The Adoring Fan",
+    name: "Adoring Fan",
     avatar: "/avatars/adoring-fan.png",
     description: "Your biggest supporter! By Azura, by Azura, by Azura! Always enthusiastic advice.",
     category: "Oblivion • Enthusiastic • Supportive"
-  },
-  {
-    id: "democracy-officer",
-    name: "Democracy Officer",
-    avatar: "/avatars/democracy-officer.png",
-    description: "Spreading managed democracy across the galaxy. For Super Earth!",
-    category: "Helldivers • Patriotic • Militant"
-  },
-  {
-    id: "minecraft-villager",
-    name: "Minecraft Villager",
-    avatar: "/avatars/minecraft-villager.png",
-    description: "Hrmm. Practical trading advice and village wisdom. Emeralds not included.",
-    category: "Minecraft • Simple • Wise"
   },
   {
     id: "arthur-morgan",
@@ -41,11 +20,32 @@ const characters = [
     category: "Red Dead • Honorable • Loyal"
   },
   {
-    id: "yennefer",
-    name: "Yennefer",
-    avatar: "/avatars/yennefer.png",
-    description: "Powerful sorceress with sharp wit. Magical solutions to life's problems.",
-    category: "The Witcher • Sarcastic • Powerful"
+    id: "democracy-officer",
+    name: "Democracy Officer",
+    avatar: "/avatars/democracy-officer.png",
+    description: "Spreading managed democracy across the galaxy. For Super Earth!",
+    category: "Helldivers • Patriotic • Militant"
+  },
+  {
+    id: "madara",
+    name: "Madara Uchiha",
+    avatar: "/avatars/madara.png",
+    description: "Legendary ninja with grand visions. Philosophical advice about power and reality.",
+    category: "Naruto • Powerful • Philosophical"
+  },
+  {
+    id: "minecraft-villager",
+    name: "Minecraft Villager",
+    avatar: "/avatars/minecraft-villager.png",
+    description: "Hrmm. Practical trading advice and village wisdom. Emeralds not included.",
+    category: "Minecraft • Simple • Wise"
+  },
+  {
+    id: "nazeem",
+    name: "Nazeem",
+    avatar: "/avatars/nazeem.png",
+    description: "Condescending Whiterun citizen. Do you get to the Cloud District very often?",
+    category: "Skyrim • Arrogant • Condescending"
   },
   {
     id: "tommy-shelby",
@@ -62,11 +62,11 @@ const characters = [
     category: "Breaking Bad • Scientific • Ruthless"
   },
   {
-    id: "madara",
-    name: "Madara Uchiha",
-    avatar: "/avatars/madara.png",
-    description: "Legendary ninja with grand visions. Philosophical advice about power and reality.",
-    category: "Naruto • Powerful • Philosophical"
+    id: "yennefer",
+    name: "Yennefer",
+    avatar: "/avatars/yennefer.png",
+    description: "Powerful sorceress with sharp wit. Magical solutions to life's problems.",
+    category: "The Witcher • Sarcastic • Powerful"
   }
 ];
 
