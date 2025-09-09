@@ -34,6 +34,13 @@ const characters = [
     category: "Helldivers • Patriotic • Militant"
   },
   {
+    id: "gandalf",
+    name: "Gandalf",
+    avatar: "/avatars/gandalf.png",
+    description: "Wise wizard with ancient knowledge. You shall not pass without good advice!",
+    category: "Lord of the Rings • Wise • Mystical"
+  },
+  {
     id: "dwight-schrute",
     name: "Dwight Schrute",
     avatar: "/avatars/dwight-schrute.png",
@@ -95,6 +102,13 @@ const characters = [
     avatar: "/avatars/yennefer.png",
     description: "Powerful sorceress with sharp wit and sharper tongue.",
     category: "The Witcher • Sarcastic • Powerful"
+  },
+  {
+    id: "yoda",
+    name: "Yoda",
+    avatar: "/avatars/yoda.png",
+    description: "Wise Jedi Master. Much wisdom, I have. Speak backwards, I do.",
+    category: "Star Wars • Wise • Mystical"
   }
 ];
 
